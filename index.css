@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+}
+
+.container {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 35vw;
+}
+
+.header {
+    width: 100%; 
+   text-align: center; 
+   border-bottom: 1px solid #000; 
+   line-height: 0.1em;
+   margin: 10px 0 20px;
+   font-weight: 400;
+   color: #ff5e8e;
+}
+
+.header_line{
+    background:#fff; 
+    padding:0 10px;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid grey;
+  padding: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  border: 1px solid grey;
+}
+
+.first_card_container {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid grey;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.second_card_container {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid grey;
+  padding: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.popular_badge {
+    position: absolute;
+    top: -7px;
+    right: 10px; 
+    background-color: #ff75a0; 
+    color: white;
+    font-size: 12px;
+    padding: 5px 9px;
+    border-radius: 2px;
+    z-index: 1; /* Make sure it's on top */
+}
+
+.popular_badge::before,
+.popular_badge::after {
+    content: '';
+    position: absolute;
+    background-color: #ff6b83; 
+    width: 5px;
+    height: 8px;
+    z-index: -1;
+}
+
+.popular_badge::before {
+    border-radius: 2px;
+    top: 1px;
+    left: -3px;
+    transform: rotate(45deg); 
+}
+
+.popular_badge::after {
+    border-radius: 2px;
+    top: 0px;
+    right: -2px;
+    transform: rotate(-45deg);
+}
+
+.third_card_container {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid grey;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.card_unit{
+    font-weight: 600;
+
+}
+
+.discount_tag{
+    background-color: #fa6989;
+    border: 1px solid #fa6989;
+    color: white;
+    padding: 3px;
+    font-size: 14px;
+    margin-left: 10px;
+    font-weight: 100;
+}
+
+
+input[type="radio"] {
+  accent-color: red;
+}
+
+.card.active {
+  background-color: rgba(255, 249, 255, 249);
+  border: 2px solid #feb8c5;
+}
+
+.discount_offer{
+    font-size: 12px;
+    text-decoration: line-through;
+    color: #d1d1d1;
+    margin-top: 0.3rem;
+}
+
+.option_container{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-top: 10px;
+    margin-left: 13px;
+    gap: 10px;
+    display: none;
+}
+
+
+.card.selected .option_container {
+    display: grid;
+}
+
+.product_spec{
+    font-size: 14px;
+    margin-bottom: 1vh;
+}
+
+select{
+    width: 5vw;
+    height: 4vh;
+}
+
+.total_container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.add_to_cart_btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff6b83;
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+footer{
+    float: right;
+    color: #d1d1d1;
+    font-size: 12px;
+    margin-top: 5px;
+}
